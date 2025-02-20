@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidown - Sosyal Medya Video İndirici</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+    <div class="container">
+        <h1>Medidown</h1>
+        <div class="subtitle">Sosyal Medya Video İndirici</div>
+        <div class="platform-selector">
+            <button id="instagramBtn" class="platform-btn">Instagram</button>
+            <button id="facebookBtn" class="platform-btn">Facebook</button>
+            <button id="youtubeBtn" class="platform-btn">YouTube</button>
+        </div>
+        <div class="download-box">
+            <input type="text" id="reelsUrl" placeholder="Video URL'sini yapıştırın">
+            <button id="downloadBtn">Video Bilgilerini Getir</button>
+        </div>
+        <div id="error" class="error-message"></div>
+        <div id="preview" class="preview-container">
+            <!-- Önizleme burada gösterilecek -->
+        </div>
+        <div id="formatSelector" class="format-selector" style="display: none;">
+            <div class="format-title">İndirme Formatı Seçin</div>
+            <div class="format-buttons">
+                <button id="mp4Btn" class="format-btn">
+                    <span class="format-icon">🎥</span>
+                    <span class="format-name">MP4 Video</span>
+                </button>
+                <button id="mp3Btn" class="format-btn">
+                    <span class="format-icon">🎵</span>
+                    <span class="format-name">MP3 Ses</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html> 

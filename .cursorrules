@@ -1,0 +1,95 @@
+# Medidown - Sosyal Medya Video İndirici
+
+## Proje Yapısı
+root/
+  ├── server/              # Sunucu tarafı kodları
+  │   ├── config/         # Yapılandırma dosyaları
+  │   ├── middleware/     # Express middleware'leri
+  │   ├── routes/         # API rotaları
+  │   ├── services/       # İş mantığı servisleri
+  │   └── server.js       # Ana sunucu dosyası
+  │
+  ├── src/                # İstemci tarafı kodları
+  │   ├── assets/         # Statik dosyalar
+  │   │   ├── images/     # Görseller
+  │   │   └── styles/     # CSS dosyaları
+  │   ├── js/            # JavaScript dosyaları
+  │   │   ├── components/ # UI bileşenleri
+  │   │   ├── config/     # Yapılandırmalar
+  │   │   ├── services/   # API servisleri
+  │   │   └── utils/      # Yardımcı fonksiyonlar
+  │   └── index.html      # Ana HTML dosyası
+  │
+  ├── .env               # Ortam değişkenleri
+  ├── .gitignore        # Git yoksayma listesi
+  └── package.json      # NPM yapılandırması
+
+## Bağımlılıklar
+- Node.js >= 14.x
+- yt-dlp (sistem üzerinde kurulu olmalı)
+- FFmpeg (sistem üzerinde kurulu olmalı)
+
+## Geliştirme Kuralları
+1. Kod Stili
+   - ESLint ve Prettier kullan
+   - Modüler yapı kullan
+   - Her dosya tek bir sorumluluğa sahip olmalı
+
+2. Dosya İsimlendirme
+   - Bileşenler: PascalCase (örn: VideoPlayer.js)
+   - Servisler: camelCase (örn: apiService.js)
+   - Stiller: kebab-case (örn: video-player.css)
+
+3. CSS Kuralları
+   - BEM metodolojisini takip et
+   - CSS değişkenlerini kullan
+   - Responsive tasarım için medya sorguları kullan
+
+4. JavaScript Kuralları
+   - ES6+ özellikleri kullan
+   - Async/await tercih et
+   - Try-catch ile hata yönetimi yap
+
+5. Güvenlik
+   - Helmet.js kullan
+   - Content Security Policy uygula
+   - Rate limiting ekle
+   - Input validasyonu yap
+
+6. Performans
+   - Compression middleware kullan
+   - Statik dosyaları önbelleğe al
+   - Büyük dosyaları stream et
+
+## Derleme ve Çalıştırma
+```bash
+# Geliştirme
+npm run dev
+
+# Üretim
+npm run prod
+
+# Kod formatı
+npm run format
+
+# Lint kontrolü
+npm run lint
+```
+
+## API Endpoints
+- POST /api/download
+  - Video bilgilerini al
+  - Request: { url: string }
+  - Response: { videoUrl, downloadUrl, thumbnail, filename }
+
+- GET /api/download-video
+  - Videoyu indir
+  - Query: ?url=string&filename=string
+  - Response: video/mp4
+
+## Ortam Değişkenleri
+- NODE_ENV: development | production
+- PORT: 3000 (varsayılan)
+- CORS_ORIGIN: *
+- RATE_LIMIT_WINDOW_MS: 900000
+- RATE_LIMIT_MAX: 100 

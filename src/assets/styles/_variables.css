@@ -1,0 +1,13 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #6B3AFF, #4361EE);
+    --text-color: #FFFFFF;
+    --background-dark: #0A0B14;
+    --card-background: #13141F;
+    --border-color: #2A2C3E;
+    --accent-color: #6B3AFF;
+    --button-hover: #5431CC;
+    --error-color: #FF4B6E;
+    --error-bg: rgba(255, 75, 110, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --progress-bg: rgba(255, 255, 255, 0.1);
+} 
