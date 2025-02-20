@@ -9,8 +9,7 @@
     "dev": "cross-env NODE_ENV=development nodemon server/server.js",
     "prod": "cross-env NODE_ENV=production node server/server.js",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "build": "npm install && chmod +x ./setup.sh && ./setup.sh"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "compression": "^1.7.4",
